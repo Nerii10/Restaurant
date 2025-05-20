@@ -52,6 +52,7 @@
 
 .rating_buttom{
     top: 50%;
+    z-index: 3;
     color: rgb(255, 255, 255);
     font-size: 20px;
     height: 30px;
