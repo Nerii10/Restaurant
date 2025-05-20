@@ -9,7 +9,7 @@ export default function Landing() {
         <>
           <motion.img
             style={{ scale, rotate }}
-            src="/Back.webp"
+            src="r/Back.webp"
             className="landing_img"
             alt="Świeże ryby w Międzywodziu – restauracja U Czecha"
           />
