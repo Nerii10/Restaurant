@@ -109,3 +109,18 @@
     width: fit-content;
   }
 }
+
+@media only screen and (max-width:400px){
+  
+  .find_us_text h1 {
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+    width: fit-content;
+  }
+
+  .find_us_text img {
+    width: 60px;
+    height: 60px;
+  }
+}

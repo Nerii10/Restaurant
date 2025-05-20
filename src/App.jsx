@@ -21,20 +21,24 @@ function App() {
           <Menu />
         </section>
 
-        <section className="perspective_wrapper">
+        <section className="perspective_wrapper" id="Lokalizacja">
           <Map />
         </section>
 
-        <section className="perspective_wrapper">
+        <section className="perspective_wrapper" id="O Naszej Restauracji">
           <About />
         </section>
 
-        <section className="perspective_wrapper" style={{ height: "450px" }}>
+        <section
+          className="perspective_wrapper"
+          id="Opinie"
+          style={{ height: "450px" }}
+        >
           <Ratings />
         </section>
       </section>
 
-      <section style={{ height: "400px" }}></section>
+      <section style={{ height: "100px" }}></section>
       <Footer />
     </section>
   );

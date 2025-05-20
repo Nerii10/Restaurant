@@ -24,7 +24,6 @@ export default function AboutSection() {
       }) => (
         <>
           <motion.section
-            id="O Naszej Restauracji"
             style={{
               opacity: headerOpacity,
               rotateX: rotateX,
@@ -138,6 +137,17 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0, skew: "0deg" }}
                     viewport={{ once: true }}
                     style={{ width: "33%" }}
+                    transition={{ duration: 0.5, ease: "circInOut", delay: 1 }}
+                  >
+                    <h4 style={{ margin: 0 }}>Klimatyczna atmosfera</h4>
+                    <motion.span className="IconEmoi">✨</motion.span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 40, skew: "-20deg" }}
+                    whileInView={{ opacity: 1, y: 0, skew: "0deg" }}
+                    viewport={{ once: true }}
+                    style={{ width: "33%" }}
                     transition={{
                       duration: 0.5,
                       ease: "circInOut",
@@ -146,17 +156,6 @@ export default function AboutSection() {
                   >
                     <h4 style={{ margin: 0 }}>Świeże ryby</h4>
                     <span className="IconEmoi">🦞</span>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 40, skew: "-20deg" }}
-                    whileInView={{ opacity: 1, y: 0, skew: "0deg" }}
-                    viewport={{ once: true }}
-                    style={{ width: "33%" }}
-                    transition={{ duration: 0.5, ease: "circInOut", delay: 1 }}
-                  >
-                    <h4 style={{ margin: 0 }}>Klimatyczna atmosfera</h4>
-                    <motion.span className="IconEmoi">✨</motion.span>
                   </motion.div>
 
                   <motion.div

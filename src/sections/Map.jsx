@@ -22,7 +22,6 @@ export default function Map() {
       }) => (
         <>
           <motion.section
-            id="Lokalizacja"
             style={{
               opacity: headerOpacity,
               rotateX: rotateX,
@@ -45,7 +44,7 @@ export default function Map() {
               </section>
 
               <section className="find_us_text">
-                <h1>Znajdź nas!</h1>
+                <h1>Nasza Lokalizacja!</h1>
                 <img src="/Map.png"></img>
               </section>
             </section>

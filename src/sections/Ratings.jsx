@@ -108,8 +108,8 @@ export default function Ratings() {
               </button>
               <AnimatePresence custom={direction} mode="popLayout">
                 <motion.div
-                  key={currentIndex}
                   className="rating"
+                  key={currentIndex}
                   custom={direction}
                   variants={variants}
                   initial="enter"
