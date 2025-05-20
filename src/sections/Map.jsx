@@ -46,7 +46,7 @@ export default function Map() {
 
               <section className="find_us_text">
                 <h1>Znajdź nas!</h1>
-                <img src="/Restaurant/Map.png"></img>
+                <img src="/Map.png"></img>
               </section>
             </section>
           </motion.section>

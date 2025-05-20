@@ -81,7 +81,7 @@ export default function AboutSection() {
                     O naszej restauracji
                   </motion.h1>
                   <motion.img
-                    src="/Restaurant/About.png"
+                    src="/About.png"
                     className="img"
                     initial={{ opacity: 0, x: 40, skewX: "-20deg" }}
                     whileInView={{ opacity: 1, x: 0, skewX: "0deg" }}

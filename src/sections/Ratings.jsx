@@ -110,7 +110,7 @@ export default function Ratings() {
                 >
                   <h2 className="rating_header">{currentReview.Opinion}</h2>
                   <img
-                    src={`/Restaurant/${currentReview.Rating}.png`}
+                    src={`/${currentReview.Rating}.png`}
                     alt="ocena"
                   />
                 </motion.div>
