@@ -1,0 +1,28 @@
+[
+    {
+      "name": "Bruschetta z pomidorami",
+      "price": "12zł",
+      "description": "Chrupiąca bagietka z pomidorami, czosnkiem i świeżą bazylią."
+    },
+    {
+      "name": "Krewetki w tempurze",
+      "price": "22zł",
+      "description": "Chrupiące krewetki w cieście tempura, podawane z sosem sweet chili."
+    },
+    {
+      "name": "Deska serów",
+      "price": "28zł",
+      "description": "Wybór najlepszych serów dojrzewających, podawanych z winogronami i orzechami."
+    },
+    {
+      "name": "Tatar wołowy",
+      "price": "30zł",
+      "description": "Drobno siekana wołowina z żółtkiem, cebulą, ogórkiem kiszonym i przyprawami."
+    },
+    {
+      "name": "Sałatka Caprese",
+      "price": "18zł",
+      "description": "Plastry mozzarelli i pomidorów z oliwą z oliwek i świeżą bazylią."
+    }
+  ]
+  

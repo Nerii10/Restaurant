@@ -1,0 +1,111 @@
+.map_container {
+  width: 90%;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  background-color: rgb(31, 31, 31);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+}
+
+.find_us_map {
+  flex-shrink: 0;
+  width: 60%;
+  height: 350px;
+}
+
+.map_widget {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px #0003;
+}
+
+.find_us_text {
+  height: 100%;
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.find_us_text img {
+  width: 150px;
+}
+
+.find_us_text h1 {
+  font-size: 50px;
+  margin: 0;
+  text-align: center;
+  width: fit-content;
+}
+
+@media only screen and (max-width: 900px) {
+  .find_us_map {
+    flex-shrink: 0;
+    width: 100%;
+    height: 200px;
+  }
+
+  .map_widget {
+    border: none;
+    box-shadow: 0px 10px 15px #0003;
+  }
+
+  .find_us_text {
+    height: 100%;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  .map_container {
+    width: 90%;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    background-color: rgb(31, 31, 31);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+  }
+
+  .find_us_text {
+    height: 120px;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  .find_us_text img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .find_us_text h1 {
+    font-size: 35px;
+    margin: 0;
+    text-align: center;
+    width: fit-content;
+  }
+}
