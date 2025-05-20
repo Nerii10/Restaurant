@@ -7,6 +7,11 @@ import { Fish, Soup, GlassWater, CakeSlice } from "lucide-react";
 
 //Data
 import DaniaGlowne from "../data/DaniaGlowne.json";
+import Napoje from "../data/Napoje.json";
+import Przystawki from "../data/Przystawki.json";
+import Zupy from "../data/Zupy.json";
+
+//Component
 import MenuToggle from "../components/MenuToggle";
 
 export function MenuList({ data, category, index }) {
@@ -113,9 +118,9 @@ export default function Menu() {
       <section className="menu_lists_container">
         {[
           { data: DaniaGlowne, category: "Dania Główne" },
-          { data: DaniaGlowne, category: "Zupy" },
-          { data: DaniaGlowne, category: "Przystawki" },
-          { data: DaniaGlowne, category: "Napoje" },
+          { data: Zupy, category: "Zupy" },
+          { data: Przystawki, category: "Przystawki" },
+          { data: Napoje, category: "Napoje" },
         ].map((list, index) => (
           <MenuList
             key={index}
