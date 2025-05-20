@@ -29,12 +29,12 @@ function App() {
           <About />
         </section>
 
-        <section className="perspective_wrapper">
+        <section className="perspective_wrapper" style={{ height: "450px" }}>
           <Ratings />
         </section>
       </section>
 
-      <section style={{height:'400px'}}></section>
+      <section style={{ height: "400px" }}></section>
       <Footer />
     </section>
   );

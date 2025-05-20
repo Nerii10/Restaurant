@@ -8,7 +8,7 @@ export default function Map() {
       blurRange={[0, 3]}
       translateYRange={[0, 100]}
       rotateXRange={[0, 10]}
-      offset={["end end", "center end"]}
+      offset={["start center", "start end"]}
       headerOpacityRange={[1, 1]}
     >
       {({
@@ -39,7 +39,7 @@ export default function Map() {
                   className="map_widget"
                   height="100%"
                   allowfullscreen=""
-                  loading="lazy"
+                  loading="eager"
                   referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
               </section>

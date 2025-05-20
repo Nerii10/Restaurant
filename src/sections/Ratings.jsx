@@ -1,37 +1,49 @@
 // src/components/Ratings.jsx
 import ScrollAnimator from "../components/ScrollAnimator";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, scale } from "framer-motion";
 import "../styles/Ratings.css";
 import reviews from "../data/Reviews.json";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-const variants = {
-  enter: (direction) => ({
-    x: direction > 0 ? 300 : -300,
-    opacity: 0,
-  }),
-  center: {
-    x: 0,
-    opacity: 1,
-  },
-  exit: (dir) => ({
-    x: dir < 0 ? 300 : -300,
-    opacity: 0,
-    transition: { duration: 0.1, ease: "easeIn" }, // szybki tween
-  }),
-};
 
 export default function Ratings() {
   const [[currentIndex, direction], setIndex] = useState([0, 0]);
 
   const currentReview = reviews[currentIndex];
 
+  const reviewRef = useRef(null);
+
+  const variants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 300 : -300,
+      opacity: 0,
+      scale: 0,
+    }),
+    exit: (dir) => ({
+      x: dir < 0 ? 300 : -300,
+      scale: 0,
+      opacity: 0,
+      transition: { type: "spring", damping: 14 },
+    }),
+  };
+
+  useEffect(() => {
+    console.log(reviewRef?.current?.offsetHeight);
+  }, [reviewRef.current]);
+
   const handleDragEnd = (offsetX) => {
+    if (!reviewRef.current) return;
+    reviewRef.current = false;
+
     if (offsetX > 50 && currentIndex > 0) {
       setIndex([currentIndex - 1, -1]);
     } else if (offsetX < -50 && currentIndex < reviews.length - 1) {
       setIndex([currentIndex + 1, 1]);
     }
+
+    setTimeout(() => {
+      reviewRef.current = true;
+    }, 750);
   };
 
   return (
@@ -40,7 +52,7 @@ export default function Ratings() {
       blurRange={[0, 3]}
       translateYRange={[0, 100]}
       rotateXRange={[0, 10]}
-      offset={["end end", "center end"]}
+      offset={["start center", "start end"]}
       headerOpacityRange={[1, 1]}
     >
       {({ y, rotateX, filter, headerOpacity, translateY }) => (
@@ -54,7 +66,7 @@ export default function Ratings() {
             translateY: translateY,
           }}
         >
-          <section className="rating_container">
+          <motion.section className="rating_container" layout>
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +97,7 @@ export default function Ratings() {
               </motion.div>
             </motion.h1>
 
-            <section className="ratings_wrapper">
+            <motion.section className="ratings_wrapper" layout>
               <button
                 className="rating_buttom"
                 onClick={() => {
@@ -94,25 +106,33 @@ export default function Ratings() {
               >
                 <ChevronLeft stroke="white" />
               </button>
-              <AnimatePresence custom={direction} mode="wait">
+              <AnimatePresence custom={direction} mode="popLayout">
                 <motion.div
                   key={currentIndex}
                   className="rating"
                   custom={direction}
                   variants={variants}
                   initial="enter"
-                  animate="center"
+                  animate={{
+                    x: 0,
+                    scale: 1,
+                    opacity: 1,
+                  }}
                   exit="exit"
-                  transition={{ type: "spring", damping: 11 }}
+                  transition={{
+                    type: "tween",
+                    duration: 0.2,
+                  }}
                   drag="x"
                   dragConstraints={{ left: 0, right: 0 }}
                   onDragEnd={(e, info) => handleDragEnd(info.offset.x)}
                 >
-                  <h2 className="rating_header">{currentReview.Opinion}</h2>
                   <img
+                    className="rating_stars"
                     src={`/${currentReview.Rating}.png`}
                     alt="ocena"
                   />
+                  <h2 className="rating_header">{currentReview.Opinion}</h2>
                 </motion.div>
               </AnimatePresence>
               <button
@@ -124,8 +144,25 @@ export default function Ratings() {
               >
                 <ChevronRight stroke="white" />
               </button>
-            </section>
-          </section>
+
+              <motion.div
+                ref={reviewRef}
+                className="rating-static"
+                transition={{
+                  type: "tween",
+                  duration: 0.1,
+                  ease: "circInOut",
+                }}
+              >
+                <img
+                  className="rating_stars"
+                  src={`/${currentReview.Rating}.png`}
+                  alt="ocena"
+                />
+                <h2 className="rating_header">{currentReview.Opinion}</h2>
+              </motion.div>
+            </motion.section>
+          </motion.section>
         </motion.section>
       )}
     </ScrollAnimator>

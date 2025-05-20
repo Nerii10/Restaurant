@@ -10,7 +10,7 @@ export default function AboutSection() {
       blurRange={[0, 3]}
       translateYRange={[0, 100]}
       rotateXRange={[0, 10]}
-      offset={["end end", "center end"]}
+      offset={["start center", "start end"]}
       headerOpacityRange={[1, 1]}
     >
       {({
@@ -24,7 +24,7 @@ export default function AboutSection() {
       }) => (
         <>
           <motion.section
-          id="O Naszej Restauracji"
+            id="O Naszej Restauracji"
             style={{
               opacity: headerOpacity,
               rotateX: rotateX,
