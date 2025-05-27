@@ -3,7 +3,7 @@ import "../styles/Menu.css";
 import { useEffect, useRef, useState } from "react";
 
 //Icons
-import { Fish, Soup, GlassWater, CakeSlice } from "lucide-react";
+import { Fish, Soup, GlassWater, CakeSlice, Salad, Leaf } from "lucide-react";
 
 //Data
 import Data from '../data/Dania.json'
@@ -25,14 +25,14 @@ export function MenuList({ data, category, index }) {
   const CategoryIcon = () => {
     const iconSize = 30;
     switch (category) {
-      case "Dania Główne":
+      case "Dania główne":
         return <Fish size={iconSize} />;
       case "Zupy":
         return <Soup size={iconSize} />;
-      case "Przystawki":
-        return <CakeSlice size={iconSize} />;
-      case "Napoje":
-        return <GlassWater size={iconSize} />;
+      case "Dania mączne i bezmięsne":
+        return <Leaf size={iconSize} />;
+      case "Sałatki":
+        return <Salad size={iconSize} />;
       default:
         return null;
     }
