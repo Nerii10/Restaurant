@@ -29,7 +29,7 @@ export function MenuList({ data, category, index }) {
         return <Fish size={iconSize} />;
       case "Zupy":
         return <Soup size={iconSize} />;
-      case "Dania mączne i bezmięsne":
+      case "Dania mączne":
         return <Leaf size={iconSize} />;
       case "Sałatki":
         return <Salad size={iconSize} />;
