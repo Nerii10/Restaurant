@@ -1,0 +1,170 @@
+{
+  "categories": [
+    {
+      "nazwa": "Zupy",
+      "dania": [
+        {
+          "nazwa": "Rosół",
+          "opis": "Klasyczna zupa na wywarze drobiowym z makaronem i warzywami.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Pomidorowa",
+          "opis": "Zupa na bazie pomidorów, podawana z ryżem lub makaronem.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Rybna",
+          "opis": "Zupa z wywaru rybnego z dodatkiem warzyw i przypraw.",
+          "cena": 20
+        },
+        {
+          "nazwa": "Cebulowa",
+          "opis": "Zupa z duszonej cebuli.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Chłodnik",
+          "opis": "Zimna zupa na bazie jogurtu i buraków z dodatkiem warzyw.",
+          "cena": 20
+        },
+        {
+          "nazwa": "Barszcz ukraiński",
+          "opis": "Gęsta zupa z buraków, warzyw i fasoli, doprawiona ziołami.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Flaki",
+          "opis": "Tradycyjna zupa z wołowych flaków z majerankiem i warzywami.",
+          "cena": 20
+        }
+      ]
+    },
+    {
+      "nazwa": "Dania główne",
+      "dania": [
+        {
+          "nazwa": "Flądra",
+          "opis": "13 zł/100 g z frytkami i surówkami",
+          "cena": 13
+        },
+        {
+          "nazwa": "Gładzica",
+          "opis": "15 zł/100 g z frytkami i surówkami",
+          "cena": 15
+        },
+        {
+          "nazwa": "Dorsz",
+          "opis": "200 g z frytkami i surówkami",
+          "cena": 45
+        },
+        {
+          "nazwa": "Sandacz",
+          "opis": "200 g z frytkami i surówkami",
+          "cena": 50
+        },
+        {
+          "nazwa": "Pstrąg smażony",
+          "opis": "350 g z frytkami i surówkami",
+          "cena": 46
+        },
+        {
+          "nazwa": "Halibut pieczony",
+          "opis": "200 g z frytkami i surówkami",
+          "cena": 48
+        },
+        {
+          "nazwa": "Łosoś pieczony",
+          "opis": "200 g z frytkami i surówkami",
+          "cena": 48
+        },
+        {
+          "nazwa": "Karmazyn smażony",
+          "opis": "13 zł/100 g z frytkami i surówkami",
+          "cena": 13
+        },
+        {
+          "nazwa": "Schabowy",
+          "opis": "140 g z ziemniakami lub frytkami i kapustą zasmażaną lub surówkami",
+          "cena": 35
+        },
+        {
+          "nazwa": "Filet panierowany z kurczaka",
+          "opis": "130 g z ziemniakami lub frytkami i surówkami",
+          "cena": 35
+        },
+        {
+          "nazwa": "Karkówka grillowana",
+          "opis": "180 g z ziemniakami lub frytkami i surówkami",
+          "cena": 38
+        },
+        {
+          "nazwa": "Filet grillowany z kurczaka",
+          "opis": "z ziemniakami lub frytkami i surówkami",
+          "cena": 38
+        },
+        { "nazwa": "Placek po węgiersku", "opis": "ze śmietaną", "cena": 45 },
+        {
+          "nazwa": "Golonka wieprzowa",
+          "opis": "z kapustą zasmażaną",
+          "cena": 50
+        },
+        {
+          "nazwa": "Kotlet mielony",
+          "opis": "200 g z ziemniakami i surówkami",
+          "cena": 30
+        },
+        {
+          "nazwa": "Gulasz węgierski",
+          "opis": "z kluskami śląskimi i surówką",
+          "cena": 45
+        },
+        {
+          "nazwa": "Roladka z kurczaka faszerowana",
+          "opis": "z ziemniakami i surówkami",
+          "cena": 45
+        },
+        {
+          "nazwa": "Żeberko w sosie własnym",
+          "opis": "z kluskami śląskimi i surówkami",
+          "cena": 45
+        }
+      ]
+    },
+    {
+      "nazwa": "Dania mączne i bezmięsne",
+      "dania": [
+        {
+          "nazwa": "Placki ziemniaczane",
+          "opis": "3 szt. ze śmietaną",
+          "cena": 20
+        },
+        {
+          "nazwa": "Pierogi",
+          "opis": "Informacja u obsługi: dostępne rodzaje zmieniają się codziennie",
+          "cena": 30
+        },
+        {
+          "nazwa": "Wątróbka drobiowa smażona",
+          "opis": "z ziemniakami i surówkami",
+          "cena": 35
+        }
+      ]
+    },
+    {
+      "nazwa": "Sałatki",
+      "dania": [
+        {
+          "nazwa": "Sałatka",
+          "opis": "z wątróbką drobiową, serem pleśniowym, orzechami i owocami, i sosem musztardowo‑miodowym",
+          "cena": 38
+        },
+        {
+          "nazwa": "Sałatka Cezar",
+          "opis": " z grillowanym kurczakiem",
+          "cena": 38
+        }
+      ]
+    }
+  ]
+}

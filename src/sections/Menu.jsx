@@ -6,10 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { Fish, Soup, GlassWater, CakeSlice } from "lucide-react";
 
 //Data
-import DaniaGlowne from "../data/DaniaGlowne.json";
-import Napoje from "../data/Napoje.json";
-import Przystawki from "../data/Przystawki.json";
-import Zupy from "../data/Zupy.json";
+import Data from '../data/Dania.json'
 
 //Component
 import MenuToggle from "../components/MenuToggle";
@@ -57,7 +54,7 @@ export function MenuList({ data, category, index }) {
       >
         <h1>
           {" "}
-          <CategoryIcon /> {category}
+          <CategoryIcon /> {data.nazwa}
         </h1>
         <MenuToggle active={isOpen} />
       </motion.section>
@@ -73,18 +70,18 @@ export function MenuList({ data, category, index }) {
         }}
       >
         <br></br>
-        {data?.map((item, index) => (
+        {data.dania?.map((item, index) => (
           <>
             <section key={index} className="menu_list_input">
               <section className="menu_list_input_top">
-                <h2>{item.name}</h2>
-                <h2 className="price">{item.price}</h2>
+                <h2>{item.nazwa}</h2>
+                <h2 className="price">{item.cena} zł</h2>
               </section>
               <section className="menu_list_input_bottom">
-                <p>{item.description}</p>
+                <p>{item.opis}</p>
               </section>
             </section>
-            {index != data.length - 1 && (
+            {index != data.dania.length - 1 && (
               <hr className="menu_list_input_hr"></hr>
             )}
           </>
@@ -116,16 +113,11 @@ export default function Menu() {
       </motion.h1>
 
       <section className="menu_lists_container">
-        {[
-          { data: DaniaGlowne, category: "Dania Główne" },
-          { data: Zupy, category: "Zupy" },
-          { data: Przystawki, category: "Przystawki" },
-          { data: Napoje, category: "Napoje" },
-        ].map((list, index) => (
+        {Data.categories?.map((list, index) => (
           <MenuList
             key={index}
-            data={list.data}
-            category={list.category}
+            data={list}
+            category={list.nazwa}
             index={index}
           />
         ))}
