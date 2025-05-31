@@ -7,10 +7,13 @@ import Map from "./sections/Map";
 import About from "./sections/About";
 import Footer from "./sections/Footer";
 import Ratings from "./sections/Ratings";
+import LanguageChanger from "./components/LanguageChanger";
 
 function App() {
   return (
     <section className="app_wrapper">
+      <LanguageChanger />
+
       <Navbar />
       <section className="perspective_wrapper">
         <Landing />

@@ -40,6 +40,8 @@
 }
 
 .menu_list_category {
+  all: unset;
+  width: 100%;
   cursor: pointer;
   background-color: var(--accentColor);
   box-sizing: border-box;

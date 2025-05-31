@@ -1,8 +1,13 @@
 import ScrollAnimator from "../components/ScrollAnimator";
+import { useLanguage } from "../context/LanguageContext";
 import "../styles/landing.css";
 import { motion } from "framer-motion";
+import { translations } from "./translations";
 
 export default function Landing() {
+  const { language } = useLanguage();
+  const ComponentContent = translations[language]?.landing;
+
   return (
     <ScrollAnimator className={"landing_wrapper"}>
       {({ scale, rotate, translateY, headerOpacity, headerScale }) => (
@@ -21,12 +26,10 @@ export default function Landing() {
               scale: headerScale,
             }}
           >
-            <motion.h1 className="landing_header">U Czecha!</motion.h1>
-            <p className="landing_paragraph">
-              Tradycyjna kuchnia polska, świeże ryby prosto z Bałtyku i rodzinna
-              atmosfera
-              <br /> - zapraszamy do restauracji U Czecha w sercu Międzywodzia.
-            </p>
+            <motion.h1 className="landing_header">
+              {ComponentContent.header}
+            </motion.h1>
+            <p className="landing_paragraph">{ComponentContent.paragraph}</p>
           </motion.section>
         </>
       )}

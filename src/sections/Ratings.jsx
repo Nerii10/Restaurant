@@ -5,8 +5,13 @@ import "../styles/Ratings.css";
 import reviews from "../data/Reviews.json";
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "./translations";
 
 export default function Ratings() {
+  const { language } = useLanguage();
+  const ComponentContent = translations[language]?.ratings;
+
   const [[currentIndex, direction], setIndex] = useState([0, 0]);
 
   const currentReview = reviews[currentIndex];
@@ -75,7 +80,7 @@ export default function Ratings() {
               style={{ position: "relative", zIndex: 1 }}
               className="OpinionHighliht"
             >
-              Poznaj Opinie Naszych Gości!
+              {ComponentContent.header}
               <motion.div
                 style={{
                   position: "absolute",

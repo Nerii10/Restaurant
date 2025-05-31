@@ -6,12 +6,13 @@ import { useEffect, useRef, useState } from "react";
 import { Fish, Soup, GlassWater, CakeSlice, Salad, Leaf } from "lucide-react";
 
 //Data
-import Data from '../data/Dania.json'
+import Data from "../data/Dania.json";
 
 //Component
 import MenuToggle from "../components/MenuToggle";
+import { useLanguage } from "../context/LanguageContext";
 
-export function MenuList({ data, category, index }) {
+export function MenuList({ data, category, index, language }) {
   const [isOpen, setIsOpen] = useState(false);
   const [fullHeight, setFullHeight] = useState(false);
   const listRef = useRef(null);
@@ -22,16 +23,20 @@ export function MenuList({ data, category, index }) {
     }
   }, [data]);
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [language]);
+
   const CategoryIcon = () => {
     const iconSize = 30;
-    switch (category) {
-      case "Dania główne":
+    switch (data.id) {
+      case 1:
         return <Fish size={iconSize} />;
-      case "Zupy":
+      case 0:
         return <Soup size={iconSize} />;
-      case "Dania mączne":
+      case 2:
         return <Leaf size={iconSize} />;
-      case "Sałatki":
+      case 3:
         return <Salad size={iconSize} />;
       default:
         return null;
@@ -40,7 +45,7 @@ export function MenuList({ data, category, index }) {
 
   return (
     <>
-      <motion.section
+      <motion.button
         className="menu_list_category"
         animate={
           index == 3 && !isOpen
@@ -57,7 +62,7 @@ export function MenuList({ data, category, index }) {
           <CategoryIcon /> {data.nazwa}
         </h1>
         <MenuToggle active={isOpen} />
-      </motion.section>
+      </motion.button>
 
       <motion.section
         ref={listRef}
@@ -93,6 +98,8 @@ export function MenuList({ data, category, index }) {
 }
 
 export default function Menu() {
+  const { language } = useLanguage();
+
   return (
     <motion.section className="menu_wrapper" id="Menu">
       <motion.h1
@@ -113,12 +120,13 @@ export default function Menu() {
       </motion.h1>
 
       <section className="menu_lists_container">
-        {Data.categories?.map((list, index) => (
+        {Data[language]?.map((list, index) => (
           <MenuList
             key={index}
             data={list}
             category={list.nazwa}
             index={index}
+            language={language}
           />
         ))}
       </section>

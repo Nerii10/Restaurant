@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import "../styles/Map.css";
 import ScrollAnimatior from "../components/ScrollAnimator.jsx";
+import { useLanguage } from "../context/LanguageContext.jsx";
+import { translations } from "./translations.js";
+
 export default function Map() {
+  const { language } = useLanguage();
+  const ComponentContent = translations[language]?.map;
+
   return (
     <ScrollAnimatior
       rotateRange={[0, 0]}
@@ -44,7 +50,7 @@ export default function Map() {
               </section>
 
               <section className="find_us_text">
-                <h1>Nasza Lokalizacja!</h1>
+                <h1>{ComponentContent.header}</h1>
                 <img src="/Map.png"></img>
               </section>
             </section>

@@ -2,8 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../styles/About.css";
 import ScrollAnimator from "../components/ScrollAnimator";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "./translations";
 
 export default function AboutSection() {
+  const { language } = useLanguage();
+  const ComponentContent = translations[language]?.about;
   return (
     <ScrollAnimator
       rotateRange={[0, 0]}
@@ -77,7 +81,7 @@ export default function AboutSection() {
                       viewport={{ once: false }}
                       transition={{ duration: 0.5, ease: "circInOut" }}
                     ></motion.span>
-                    O naszej restauracji
+                    {ComponentContent.header[0]}
                   </motion.h1>
                   <motion.img
                     src="/About.png"
@@ -94,7 +98,7 @@ export default function AboutSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, ease: "circInOut" }}
                 >
-                  Witamy u CZECHA!
+                  {ComponentContent.header[1]}
                 </motion.h2>
                 <motion.h3
                   initial={{ opacity: 0, y: 40 }}
@@ -102,8 +106,7 @@ export default function AboutSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, ease: "circInOut", delay: 0.4 }}
                 >
-                  to wyjątkowe miejsce w Międzywodziu, gdzie serwujemy świeże,
-                  lokalne ryby prosto z morza.
+                  {ComponentContent.paragraph[0]}
                 </motion.h3>
                 <motion.h3
                   initial={{ opacity: 0, y: 40 }}
@@ -111,11 +114,7 @@ export default function AboutSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, ease: "circInOut", delay: 0.6 }}
                 >
-                  Nasze dania łączą tradycję z nowoczesnym smakiem, tworząc
-                  niezapomniane doświadczenie kulinarne. Jeśli odwiedzasz
-                  Szczecin, zapraszamy również do naszej restauracji w mieście
-                  tam czeka na Ciebie pełne menu z wyśmienitymi daniami kuchni
-                  polskiej i europejskiej.
+                  {ComponentContent.paragraph[1]}
                 </motion.h3>
 
                 <br></br>
@@ -139,7 +138,9 @@ export default function AboutSection() {
                     style={{ width: "33%" }}
                     transition={{ duration: 0.5, ease: "circInOut", delay: 1 }}
                   >
-                    <h4 style={{ margin: 0 }}>Klimatyczna atmosfera</h4>
+                    <h4 style={{ margin: 0 }}>
+                      {ComponentContent.features[0]}
+                    </h4>
                     <motion.span className="IconEmoi">✨</motion.span>
                   </motion.div>
 
@@ -151,11 +152,13 @@ export default function AboutSection() {
                     transition={{
                       duration: 0.5,
                       ease: "circInOut",
-                      delay: 0.8,
+                      delay: 1.2,
                     }}
                   >
-                    <h4 style={{ margin: 0 }}>Świeże ryby</h4>
-                    <span className="IconEmoi">🦞</span>
+                    <h4 style={{ margin: 0 }}>
+                      {ComponentContent.features[1]}
+                    </h4>
+                    <span className="IconEmoi">🐠</span>
                   </motion.div>
 
                   <motion.div
@@ -165,11 +168,13 @@ export default function AboutSection() {
                     transition={{
                       duration: 0.5,
                       ease: "circInOut",
-                      delay: 1.2,
+                      delay: 1.4,
                     }}
                     style={{ width: "33%" }}
                   >
-                    <h4 style={{ margin: 0 }}>Smak, który pokochasz</h4>
+                    <h4 style={{ margin: 0 }}>
+                      {ComponentContent.features[2]}
+                    </h4>
                     <motion.span className="IconEmoi">🍽️</motion.span>
                   </motion.div>
                 </div>

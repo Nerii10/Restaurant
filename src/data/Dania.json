@@ -1,6 +1,7 @@
 {
-  "categories": [
+  "pl": [
     {
+      "id": 0,
       "nazwa": "Zupy",
       "dania": [
         {
@@ -41,16 +42,17 @@
       ]
     },
     {
+      "id": 1,
       "nazwa": "Dania główne",
       "dania": [
         {
           "nazwa": "Flądra",
-          "opis": "13 zł/100 g z frytkami i surówkami",
+          "opis": "13 zł/100 g ryby + 5zł jeden z dodatków (frytki, surowka)",
           "cena": 13
         },
         {
           "nazwa": "Gładzica",
-          "opis": "15 zł/100 g z frytkami i surówkami",
+          "opis": "15 zł/100 g ryby + 5zł jeden z dodatków (frytki, surowka)",
           "cena": 15
         },
         {
@@ -80,12 +82,17 @@
         },
         {
           "nazwa": "Karmazyn smażony",
-          "opis": "13 zł/100 g z frytkami i surówkami",
+          "opis": "13 zł/100 g ryby + 5zł jeden z dodatków (frytki, surowka)",
           "cena": 13
         },
         {
           "nazwa": "Schabowy",
           "opis": "140 g z ziemniakami lub frytkami i kapustą zasmażaną lub surówkami",
+          "cena": 35
+        },
+        {
+          "nazwa": "Wątróbka drobiowa smażona",
+          "opis": "z ziemniakami i surówkami",
           "cena": 35
         },
         {
@@ -132,6 +139,7 @@
       ]
     },
     {
+      "id": 2,
       "nazwa": "Dania mączne",
       "dania": [
         {
@@ -143,15 +151,11 @@
           "nazwa": "Pierogi",
           "opis": "Informacja u obsługi: dostępne rodzaje zmieniają się codziennie",
           "cena": 30
-        },
-        {
-          "nazwa": "Wątróbka drobiowa smażona",
-          "opis": "z ziemniakami i surówkami",
-          "cena": 35
         }
       ]
     },
     {
+      "id": 3,
       "nazwa": "Sałatki",
       "dania": [
         {
@@ -162,6 +166,358 @@
         {
           "nazwa": "Sałatka Cezar",
           "opis": " z grillowanym kurczakiem",
+          "cena": 38
+        }
+      ]
+    }
+  ],
+  "en": [
+    {
+      "id": 0,
+      "nazwa": "Soups",
+      "dania": [
+        {
+          "nazwa": "Chicken Broth",
+          "opis": "Classic chicken broth with noodles and vegetables.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Tomato Soup",
+          "opis": "Tomato-based soup served with rice or pasta.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Fish Soup",
+          "opis": "Fish broth with vegetables and spices.",
+          "cena": 20
+        },
+        {
+          "nazwa": "Onion Soup",
+          "opis": "Soup made from stewed onions.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Cold Beet Soup",
+          "opis": "Cold yogurt and beet soup with vegetables.",
+          "cena": 20
+        },
+        {
+          "nazwa": "Ukrainian Borscht",
+          "opis": "Thick beet soup with vegetables and beans, seasoned with herbs.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Tripe Soup",
+          "opis": "Traditional beef tripe soup with marjoram and vegetables.",
+          "cena": 20
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "nazwa": "Main Dishes",
+      "dania": [
+        {
+          "nazwa": "Flounder",
+          "opis": "13 PLN/100g of fish + 5 PLN for one side (fries, salad)",
+          "cena": 13
+        },
+        {
+          "nazwa": "Plaice",
+          "opis": "15 PLN/100g of fish + 5 PLN for one side (fries, salad)",
+          "cena": 15
+        },
+        {
+          "nazwa": "Cod",
+          "opis": "200g with fries and salads",
+          "cena": 45
+        },
+        {
+          "nazwa": "Zander",
+          "opis": "200g with fries and salads",
+          "cena": 50
+        },
+        {
+          "nazwa": "Fried Trout",
+          "opis": "350g with fries and salads",
+          "cena": 46
+        },
+        {
+          "nazwa": "Baked Halibut",
+          "opis": "200g with fries and salads",
+          "cena": 48
+        },
+        {
+          "nazwa": "Baked Salmon",
+          "opis": "200g with fries and salads",
+          "cena": 48
+        },
+        {
+          "nazwa": "Fried Redfish",
+          "opis": "13 PLN/100g of fish + 5 PLN for one side (fries, salad)",
+          "cena": 13
+        },
+        {
+          "nazwa": "Pork Chop",
+          "opis": "140g with potatoes or fries and braised cabbage or salads",
+          "cena": 35
+        },
+        {
+          "nazwa": "Fried Chicken Liver",
+          "opis": "with potatoes and salads",
+          "cena": 35
+        },
+        {
+          "nazwa": "Breaded Chicken Fillet",
+          "opis": "130g with potatoes or fries and salads",
+          "cena": 35
+        },
+        {
+          "nazwa": "Grilled Neck",
+          "opis": "180g with potatoes or fries and salads",
+          "cena": 38
+        },
+        {
+          "nazwa": "Grilled Chicken Fillet",
+          "opis": "with potatoes or fries and salads",
+          "cena": 38
+        },
+        {
+          "nazwa": "Hungarian Potato Pancake",
+          "opis": "with sour cream",
+          "cena": 45
+        },
+        {
+          "nazwa": "Pork Knuckle",
+          "opis": "with braised cabbage",
+          "cena": 50
+        },
+        {
+          "nazwa": "Minced Cutlet",
+          "opis": "200g with potatoes and salads",
+          "cena": 30
+        },
+        {
+          "nazwa": "Hungarian Goulash",
+          "opis": "with Silesian dumplings and salad",
+          "cena": 45
+        },
+        {
+          "nazwa": "Stuffed Chicken Roll",
+          "opis": "with potatoes and salads",
+          "cena": 45
+        },
+        {
+          "nazwa": "Ribs in Own Sauce",
+          "opis": "with Silesian dumplings and salad",
+          "cena": 45
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nazwa": "Flour Dishes",
+      "dania": [
+        {
+          "nazwa": "Potato Pancakes",
+          "opis": "3 pcs with sour cream",
+          "cena": 20
+        },
+        {
+          "nazwa": "Dumplings",
+          "opis": "Ask the staff: available types change daily",
+          "cena": 30
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nazwa": "Salads",
+      "dania": [
+        {
+          "nazwa": "Salad",
+          "opis": "with chicken liver, blue cheese, nuts, fruits and mustard-honey dressing",
+          "cena": 38
+        },
+        {
+          "nazwa": "Caesar Salad",
+          "opis": "with grilled chicken",
+          "cena": 38
+        }
+      ]
+    }
+  ],
+  "de": [
+    {
+      "id": 0,
+      "nazwa": "Suppen",
+      "dania": [
+        {
+          "nazwa": "Hühnerbrühe",
+          "opis": "Klassische Brühe mit Nudeln und Gemüse.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Tomatensuppe",
+          "opis": "Suppe auf Tomatenbasis, serviert mit Reis oder Nudeln.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Fischsuppe",
+          "opis": "Fischbrühe mit Gemüse und Gewürzen.",
+          "cena": 20
+        },
+        {
+          "nazwa": "Zwiebelsuppe",
+          "opis": "Suppe aus gedünsteten Zwiebeln.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Kalte Rote-Bete-Suppe",
+          "opis": "Kalte Suppe aus Joghurt und Roter Bete mit Gemüse.",
+          "cena": 20
+        },
+        {
+          "nazwa": "Ukrainischer Borschtsch",
+          "opis": "Dicke Suppe aus Roter Bete, Gemüse und Bohnen, mit Kräutern gewürzt.",
+          "cena": 15
+        },
+        {
+          "nazwa": "Kuttelsuppe",
+          "opis": "Traditionelle Suppe aus Rindermagen mit Majoran und Gemüse.",
+          "cena": 20
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "nazwa": "Hauptgerichte",
+      "dania": [
+        {
+          "nazwa": "Flunder",
+          "opis": "13 PLN/100g Fisch + 5 PLN für eine Beilage (Pommes, Salat)",
+          "cena": 13
+        },
+        {
+          "nazwa": "Scholle",
+          "opis": "15 PLN/100g Fisch + 5 PLN für eine Beilage (Pommes, Salat)",
+          "cena": 15
+        },
+        {
+          "nazwa": "Dorsch",
+          "opis": "200g mit Pommes und Salaten",
+          "cena": 45
+        },
+        {
+          "nazwa": "Zander",
+          "opis": "200g mit Pommes und Salaten",
+          "cena": 50
+        },
+        {
+          "nazwa": "Gebratene Forelle",
+          "opis": "350g mit Pommes und Salaten",
+          "cena": 46
+        },
+        {
+          "nazwa": "Gebackener Heilbutt",
+          "opis": "200g mit Pommes und Salaten",
+          "cena": 48
+        },
+        {
+          "nazwa": "Gebackener Lachs",
+          "opis": "200g mit Pommes und Salaten",
+          "cena": 48
+        },
+        {
+          "nazwa": "Gebratener Rotbarsch",
+          "opis": "13 PLN/100g Fisch + 5 PLN für eine Beilage (Pommes, Salat)",
+          "cena": 13
+        },
+        {
+          "nazwa": "Schnitzel",
+          "opis": "140g mit Kartoffeln oder Pommes und gedünstetem Kohl oder Salaten",
+          "cena": 35
+        },
+        {
+          "nazwa": "Gebratene Hühnerleber",
+          "opis": "mit Kartoffeln und Salaten",
+          "cena": 35
+        },
+        {
+          "nazwa": "Paniertes Hähnchenfilet",
+          "opis": "130g mit Kartoffeln oder Pommes und Salaten",
+          "cena": 35
+        },
+        {
+          "nazwa": "Gegrillter Nacken",
+          "opis": "180g mit Kartoffeln oder Pommes und Salaten",
+          "cena": 38
+        },
+        {
+          "nazwa": "Gegrilltes Hähnchenfilet",
+          "opis": "mit Kartoffeln oder Pommes und Salaten",
+          "cena": 38
+        },
+        {
+          "nazwa": "Ungarischer Kartoffelpuffer",
+          "opis": "mit Sauerrahm",
+          "cena": 45
+        },
+        {
+          "nazwa": "Schweinshaxe",
+          "opis": "mit gedünstetem Kohl",
+          "cena": 50
+        },
+        {
+          "nazwa": "Frikadelle",
+          "opis": "200g mit Kartoffeln und Salaten",
+          "cena": 30
+        },
+        {
+          "nazwa": "Ungarisches Gulasch",
+          "opis": "mit Schlesischen Klößen und Salat",
+          "cena": 45
+        },
+        {
+          "nazwa": "Gefüllte Hähnchenroulade",
+          "opis": "mit Kartoffeln und Salaten",
+          "cena": 45
+        },
+        {
+          "nazwa": "Rippchen in eigener Soße",
+          "opis": "mit Schlesischen Klößen und Salat",
+          "cena": 45
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nazwa": "Mehlspeisen",
+      "dania": [
+        {
+          "nazwa": "Kartoffelpuffer",
+          "opis": "3 Stück mit Sauerrahm",
+          "cena": 20
+        },
+        {
+          "nazwa": "Teigtaschen",
+          "opis": "Informationen beim Personal: Verfügbare Sorten ändern sich täglich",
+          "cena": 30
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nazwa": "Salate",
+      "dania": [
+        {
+          "nazwa": "Salat",
+          "opis": "mit Hühnerleber, Blauschimmelkäse, Nüssen, Früchten und Honig-Senf-Dressing",
+          "cena": 38
+        },
+        {
+          "nazwa": "Caesar-Salat",
+          "opis": "mit gegrilltem Hähnchen",
           "cena": 38
         }
       ]
