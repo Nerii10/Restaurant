@@ -12,7 +12,7 @@ import Data from "../data/Dania.json";
 import MenuToggle from "../components/MenuToggle";
 import { useLanguage } from "../context/LanguageContext";
 
-export function MenuList({ data, category, index, language }) {
+export function MenuList({ polish, data, category, index, language }) {
   const [isOpen, setIsOpen] = useState(false);
   const [fullHeight, setFullHeight] = useState(false);
   const listRef = useRef(null);
@@ -75,12 +75,17 @@ export function MenuList({ data, category, index, language }) {
         }}
       >
         <br></br>
+
         {data.dania?.map((item, index) => (
           <>
             <section key={index} className="menu_list_input">
               <section className="menu_list_input_top">
-                <h2>{item.nazwa}</h2>
-                <h2 className="price">{item.cena} zł</h2>
+                <div className="menu_list_input_top_left">
+                  <h2 style={{margin:0}}>{item.nazwa}</h2>
+                  {language != 'pl' && <p style={{margin:0,}}>({polish.dania[index].nazwa})</p>}
+                </div>
+
+                <h2 className="price">{item.cena}zł</h2>
               </section>
               <section className="menu_list_input_bottom">
                 <p>{item.opis}</p>
@@ -123,6 +128,7 @@ export default function Menu() {
         {Data[language]?.map((list, index) => (
           <MenuList
             key={index}
+            polish={Data["pl"][index]}
             data={list}
             category={list.nazwa}
             index={index}

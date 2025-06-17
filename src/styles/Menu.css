@@ -97,9 +97,18 @@
 .menu_list_input_top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.menu_list_input_top_left{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .menu_list_input_top .price {
